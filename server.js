@@ -43,6 +43,12 @@ app.get('/students/:studentId', function(req, res) {
 app.post('/add', function(req, res){
     // tested in postman and it works!!!!!!!
     console.log(req.body);
+    if (req.body.name) {
+        roster.push(req.body);
+        res.send("Student added SON");
+    } else {
+        res.send('You wrong! Enter data next time!');
+    }
 });
 
 // get route that returns three stooges
