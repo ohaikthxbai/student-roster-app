@@ -7,6 +7,7 @@ var PORT = 3000;
 
 // in order to take in POST data easily
 // process PUT and POST data; url query strings
+// middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
@@ -40,7 +41,8 @@ app.get('/students/:studentId', function(req, res) {
 });
 
 app.post('/add', function(req, res){
-    
+    // tested in postman and it works!!!!!!!
+    console.log(req.body);
 });
 
 // get route that returns three stooges
